@@ -6,19 +6,16 @@ public class Celular {
     private Integer camera;
     private Integer bateria;
     Private Decimal preco;       
-}
+
 
 public Celular(){}
 
 public Celular (String marca, String modelo, Decimal preco){
-    this.setMarca= marca;
-    this.setModelo = modelo;
-    this.setPreco = preco;
-    
+    this.marca= marca;
+    this.modelo = modelo;
+    this.preco = preco;    
 }
-@isTest static void testName(){
     
-}
 
  	public String getMarca(){
         return marca;
@@ -32,20 +29,20 @@ public Celular (String marca, String modelo, Decimal preco){
     public void setModelo(String modelo){
         this.modelo = modelo;
     }
-	public Integer getPolegadas ()){
-        return polegas;
+	public Integer getPolegadas (){
+        return polegadas;
     }
-    public void setPolegadas(String polegadas){
+    public void setPolegadas(Integer polegadas){
         this.polegadas = polegadas;
     }
-	public Boolean getTeleInfinita ()){
+	public Boolean getTeleInfinita (){
         return telaInfinita;
     }
     public void setTelaInfinita(String teleInfinita){
         this.telaInfinita = telaInfinita;
     }
 	    }
-	public Boolean getCamera ()){
+	public Integer getCamera (){
         return camera;
     }
     public void setCamera(String camera){
@@ -55,11 +52,18 @@ public Celular (String marca, String modelo, Decimal preco){
         return bateria;
     }
     public void setBateria(String bateria){
-        this.bsateria = bateria;
+        this.bateria = bateria;
     }
 	public Deciman getPreco ()){
         return preco;
     }
     public void setPreco(String modelo){
-        this.preco = preco;
+        if (preco > 0) {
+       		this.preco = preco;
+        }else{
+            this.preco = null
+        	
+        }
     }
+
+}
