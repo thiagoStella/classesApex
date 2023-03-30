@@ -1,0 +1,19 @@
+@isTest
+public class CelularTest {
+	@isTest
+    public static void teste(){
+        Celular cel = new Celular ('xiaomi','a9', 1000.00);
+        cel.setPolegadas(8);
+        cel.setTelaInifita(false);
+        cel.setCamera(12);
+        cel.setBateria(80);
+        
+        System.assert(cel.getMarca().equals('xiaomi'),'Erro ao armazenar a marca.');
+		System.assert(cel.getModelo().equals('a9'),'Erro ao armazenar o modelo.');
+        System.assert(cel.getPolegadas() == 8,'Erro ao armazenar as polegadas.');
+		System.assert(cel.getCamera() == 12,'Erro ao armazenar a camera.');
+		System.assert(cel.getBateria() == 80,'Erro ao armazenar a bateria.');
+		System.assert(cel.getTelaInfinita().equals(false);	
+        
+    }
+}
